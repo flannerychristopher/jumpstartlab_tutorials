@@ -1,7 +1,21 @@
 <html>
-  <head></head>
+  <head>
+    <style>
+      body {
+        background-color: <%= background %>;
+        font-family: Verdana, sans-serif;
+      }
+      h1, p, form {
+        text-align: center;
+      }
+
+      </style>
+  </head>
+
   <body>
-    <p>Try to guess the secret number between 1 and 100! <%= number %></p>
+    <h1>Guess the Number!</h1>
+
+    <p>Try to guess the secret number between 1 and 100!</p>
 
     <form>
       <input type="text" name="guess" />
@@ -9,6 +23,8 @@
     </form>
 
   <p><%= message %></p>
+
+  <p>hint: the number is <%= number %></p>
 
   </body>
 </html>
