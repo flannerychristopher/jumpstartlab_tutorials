@@ -1,0 +1,29 @@
+<form action='/' method='POST'>
+  <p>
+    Your Idea:
+  </p>
+  <input type='text' name='idea[title]'/><br/>
+  <textarea name='idea[description]'></textarea><br/>
+  <input type='submit'/>
+</form>
+
+<ul>
+  <% ideas.each do |idea| %>
+    <li>
+
+      <%= idea.title %><br/>
+      <%= idea.description %><br />
+
+      <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
+        <input type='submit' value="+"/>
+      </form>
+
+      <a href="/<%= idea.id %>/edit">Edit</a>
+
+      <form action='/<%= idea.id %>' method='POST' style="display: inline">
+        <input type='hidden' name='_method' value='DELETE'>
+        <input type='submit' value='delete'/>
+      </form>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,14 @@
+---
+ideas:
+- title: business idea
+  description: drive through haircuts
+  rank: 2
+- title: activity
+  description: throw rocks at cards
+  rank: 2
+- title: app
+  description: ride share
+  rank: 2
+- !ruby/hash:Sinatra::IndifferentHash
+  title: activity
+  description: find a friend or two
